@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./src/assets/Fonts/Poppins-200.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./src/assets/Fonts/Poppins-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./src/assets/Fonts/Poppins-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./src/assets/Fonts/Poppins-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./src/assets/Fonts/Poppins-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./src/assets/Fonts/Poppins-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./icons/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+body {
+  min-height: 100vh;
+  background: #f9e6df;
+}
+
+.bgupleft img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21%;
+  animation-delay: 3s;
+}
+
+.bgleft img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  animation-delay: 0s;
+}
+
+.bgleftup img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: -1vh;
+  left: 98vh;
+  width: 22%;
+  animation-delay: 4.5s;
+}
+
+.bgleftdown img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  bottom: 5vh;
+  left: 92vh;
+  width: 24%;
+  animation-delay: 2s;
+}
+
+.bgright img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  animation-delay: 1s;
+}
+
+.bgrightup img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  animation-delay: 3s;
+}
+.logo img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 6vh;
+  left: 45vh;
+  width: 27.8%;
+  z-index: 10000;
+  animation-delay: 5s;
+}
+.logo2 img {
+  animation: bgs 8s ease-in-out infinite;
+  position: absolute;
+  top: 6.5vh;
+  left: 53vh;
+  width: 24%;
+  animation-delay: 4s;
+}
+.apple img {
+  position: absolute;
+  bottom: 2vh;
+  left: 2.5vh;
+  width: 7.5%;
+  z-index: 9999;
+}
+.googleplay img {
+  position: absolute;
+  bottom: 2.1vh;
+  left: 20vh;
+  width: 8.3%;
+  z-index: 9999;
+}
+.social img {
+  position: absolute;
+  bottom: 1.5vh;
+  right: 2vh;
+  width: 13%;
+  z-index: 9999;
+}
+.footer-content p {
+  font-family: 'Poppins';
+  font-size: larger;
+  font-weight: 700;
+  position: absolute;
+  bottom: 3vh;
+  left: 31%;
+  width: 50%;
+  z-index: 9999;
+}
+
+@keyframes bgs {
+  0% {
+    transform: translateY(-6vh);
+  }
+  50% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-6vh);
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+.bubbles {
+  /* position: relative; */
+  display: flex;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px #ffffff,
+    0 0 50px #ffffff,
+    0 0 100px #ffffff;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(170s / var(--i));
+}
+.bubbles span:nth-child(even) {
+  background: #fff893;
+  box-shadow:
+    0 0 0 10px #fff893,
+    0 0 50px #fff893,
+    0 0 100px #fff893;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0.05);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.4);
+  }
+}
+
+section {
+  /* position: relative; */
+  width: 100%;
+  height: 93.5vh;
+  overflow: hidden;
+}
+
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/Images/wave.png);
+  background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+  animation: animatewav 20s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0px;
+}
+@keyframes animatewav {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section .wave.wave2 {
+  animation: animatewav2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.75;
+  animation-delay: -5s;
+  bottom: 15px;
+}
+
+@keyframes animatewav2 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+section .wave.wave3 {
+  animation: animatewav3 10s linear infinite;
+  z-index: 998;
+  opacity: 0.5;
+  animation-delay: -2s;
+  bottom: 30px;
+}
+
+@keyframes animatewav3 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section .wave.wave4 {
+  animation: animatewav4 8s linear infinite;
+  z-index: 997;
+  opacity: 0.25;
+  animation-delay: 4s;
+  bottom: 45px;
+}
+
+@keyframes animatewav4 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 93.5vh;
+  width: 100%;
+  height: 6.5vh;
+  background: white;
+}
+
+.bubbles,
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btns-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 99999;
+}

@@ -1,5 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import Footer from './Footer.vue'
 
 const router = useRouter()
 
@@ -18,5 +19,7 @@ const goBack = () => {
     </div>
 
     <button @click="goBack">Volver</button>
+
+    <Footer />
   </div>
 </template>

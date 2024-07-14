@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import stores from '../../data'
+import Footer from './Footer.vue'
 
 const route = useRoute()
 const storeName = route.params.storeName
@@ -92,10 +93,12 @@ onMounted(() => {
         <button>Llevame!</button>
       </router-link>
     </div>
+    <Footer />
   </div>
 
   <div v-else>
     <h1>Tienda no encontrada: {{ storeName }}</h1>
+    <Footer />
   </div>
 </template>
 
